@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -23,7 +24,7 @@ namespace MyFirstCodeOOP
 
         private int ValidateYear(int year)
         {
-            if (year >= 0)
+            if (year >= 1)
             {
                 return year;
             }
@@ -34,38 +35,35 @@ namespace MyFirstCodeOOP
         #region Methods
         public override string ToString()
         {
-            return $"The date entered is {_year:0000}/{_month:00}/{_day:00}";
+            return $"{_year:0000}/{_month:00}/{_day:00}";
         }
 
         private int ValidateDay(int day, int month)
         {
+            if (month == 2)
             {
-                if (month == 2)
+                if (day >= 1 && day <= 28)
                 {
-                    if (day >= 1 && day <= 28)
-                    {
-                        return day;
-                    }
-                    throw new Dayexception("The day is invalid!");
-                }
-
-                if (month == 1  month == 3  month == 5  month == 7  month == 8  month == 10  month == 12)
-            {
-                    if (day >= 1 && day <= 31)
-                    {
-                        return day;
-                    }
-                }
-            else
-                {
-                    if (day >= 1 && day <= 30)
-                    {
-                        return day;
-                    }
+                    return day;
                 }
                 throw new Dayexception("The day is invalid!");
             }
 
+            if (month == 1 || month == 3|| month == 5 || month == 7 || month == 8|| month == 10 || month == 12)
+            {
+                if (day >= 1 && day <= 31)
+                {
+                    return day;
+                }
+            }
+            else
+            {
+                if (day >= 1 && day <= 30)
+                {
+                    return day;
+                }
+            }
+            throw new Dayexception("The day is invalid!");
         }
 
         private int ValidateMonth(int month)
@@ -80,4 +78,3 @@ namespace MyFirstCodeOOP
         #endregion
     }
 }
-

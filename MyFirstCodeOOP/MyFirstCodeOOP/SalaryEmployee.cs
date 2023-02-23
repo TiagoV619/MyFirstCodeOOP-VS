@@ -10,9 +10,6 @@ namespace MyFirstCodeOOP
 
         public decimal Salary { get; set; }
 
-
-
-
         #endregion
 
         #region Methods
@@ -24,8 +21,8 @@ namespace MyFirstCodeOOP
 
         public override string ToString()
         {
-            return $"{} \n\t Value to pay: {}";
-            //39:24
+            return $"{base.ToString()} \n\t Value to pay: {GetValueToPay()}";
+            
         }
 
         #endregion

@@ -9,25 +9,26 @@ namespace MyFirstCodeOOP
         #region Properties
         public int Id { get; set; }
         public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Birthday { get; set; }
-        public string HiringDate { get; set; }
-        public int IsActive { get; set; }
+        public String LastName { get; set; }
+        public Date Birthday { get; set; }
+        public Date HiringDate { get; set; }
+        public bool IsActive { get; set; }
+        #endregion
 
         #region Methods
 
         public abstract decimal GetValueToPay();
-
+        #endregion
         public override string ToString()
         {
-            return $"---EMPLOYEE---\n\t" +
+           /* return $"---EMPLOYEE---\n\t" +
                 $" ID: {Id}\n\t " +
                 $" First Name: {FirstName} \n\t " +
                 $" Last Name: {LastName} \n\t " +
                 $"Birth date: {Birthday} \n\t " +
                 $"Hiring Date: {HiringDate} \n\t " +
-                $" Is active?: {IsActive}";
-            /*return String.Format($"---EMPLOYEE---\n\t" +
+                $" Is active?: {IsActive}";*/
+            return String.Format($"---EMPLOYEE---\n\t" +
                 $" ID: {0}\n\t " +
                 $" First Name: {1} \n\t " +
                 $" Last Name: {2} \n\t " +
@@ -39,18 +40,8 @@ namespace MyFirstCodeOOP
                 LastName,
                 Birthday,
                 HiringDate,
-                IsActive);*/
-        } 
-            
-)
-            
-
-
-
-
+                IsActive);
         }
-
-        #endregion
-        #endregion
     }
 }
+   
