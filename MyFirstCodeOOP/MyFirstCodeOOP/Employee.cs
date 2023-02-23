@@ -18,7 +18,7 @@ namespace MyFirstCodeOOP
         #region Methods
 
         public abstract decimal GetValueToPay();
-        #endregion
+        
         public override string ToString()
         {
            /* return $"---EMPLOYEE---\n\t" +
@@ -28,13 +28,13 @@ namespace MyFirstCodeOOP
                 $"Birth date: {Birthday} \n\t " +
                 $"Hiring Date: {HiringDate} \n\t " +
                 $" Is active?: {IsActive}";*/
-            return String.Format($"---EMPLOYEE---\n\t" +
-                $" ID: {0}\n\t " +
-                $" First Name: {1} \n\t " +
-                $" Last Name: {2} \n\t " +
-                $"Birth date: {3} \n\t " +
-                $"Hiring Date: {4} \n\t " +
-                $" Is active?: {5}",
+            return String.Format("---EMPLOYEE---\n\t" +
+                " id ttettsdrenhshs: {0}\n\t " +
+                " Last Name: {1} \n\t " +
+                " First Name: {2} \n\t " +
+                "Birth date: {3} \n\t " +
+                "Hiring Date: {4} \n\t " +
+                " Is active?: {5}",
                 Id,
                 FirstName,
                 LastName,
@@ -42,6 +42,7 @@ namespace MyFirstCodeOOP
                 HiringDate,
                 IsActive);
         }
+        #endregion
     }
 }
    
