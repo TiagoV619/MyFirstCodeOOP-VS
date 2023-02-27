@@ -104,6 +104,48 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine(comissionemployee);
 
+                // consola contrato empleado
+
+
+                Console.WriteLine("*************************");
+                Console.WriteLine("*  CONTRACTOR EMPLOYEE  *");
+                Console.WriteLine("*************************");
+
+                Console.WriteLine("Please write You ID: ");
+                ID = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please write you Name: ");
+                firstname = Console.ReadLine();
+
+                Console.WriteLine("Please write you last name: ");
+                lastname = Console.ReadLine();
+
+                Console.WriteLine("Are you active?: ");
+                isactive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your number of hours: ");
+                float hours = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Enter your value per hours: ");
+                decimal hourvalue = Convert.ToDecimal(Console.ReadLine());
+
+                Employee contractemployee = new ContractorEmployee()
+                {
+                    Id = ID,
+                    FirstName = firstname,
+                    LastName = lastname,
+                    Birthday = new Date(2003, 05, 30),
+                    HiringDate = new Date(2022, 3, 4),
+                    IsActive = isactive,
+                    hours = hours,
+                    hourvalue = hourvalue,
+
+
+                };
+
+                Console.WriteLine(contractemployee);
+
+
 
             }
             catch (Exception oli)
