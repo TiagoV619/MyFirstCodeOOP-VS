@@ -145,6 +145,48 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine(contractemployee);
 
+                // Consola comision base de empleado
+                Console.WriteLine("*******************************");
+                Console.WriteLine("*  BASE & COMISSION EMPLOYEE  *");
+                Console.WriteLine("*******************************");
+
+                Console.WriteLine("Please write You ID: ");
+                ID = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please write you Name: ");
+                firstname = Console.ReadLine();
+
+                Console.WriteLine("Please write you last name: ");
+                lastname = Console.ReadLine();
+
+                Console.WriteLine("Are you active?: ");
+                isactive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your Comission percentage: ");
+                comissionpercentege = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Enter your sales: ");
+                sales = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Enter your salary base: ");
+                decimal SalaryBase = Convert.ToDecimal(Console.ReadLine());
+
+                Employee BasecomissionEmployee = new Basecomissionemployee()
+                {
+                    Id = ID,
+                    FirstName = firstname,
+                    LastName = lastname,
+                    Birthday = new Date(2003, 05, 30),
+                    HiringDate = new Date(2022, 3, 4),
+                    ComissionPercentage = comissionpercentege,
+                    Sales = sales,
+                    IsActive = isactive,
+                    Base = SalaryBase,
+
+                };
+
+                Console.WriteLine(BasecomissionEmployee);
+
 
 
             }
