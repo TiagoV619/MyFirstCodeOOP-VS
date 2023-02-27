@@ -7,8 +7,25 @@ namespace MyFirstCodeOOP
         {
             try
             {
-             
-                
+                // consola fecha de nacimiento
+                Console.WriteLine("********************");
+                Console.WriteLine("*   OPP CONCEPTS   *");
+                Console.WriteLine("********************");
+
+                Console.WriteLine("Please wirte your birth date year: ");
+                var year = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+                Console.WriteLine("Please wirte your birth date month: ");
+                var month = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+                Console.WriteLine("Please wirte your birth date day: ");
+                var day = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("");
+                Console.WriteLine(new Date(Convert.ToInt32(year),Convert.ToInt32(month),Convert.ToInt32(day)));
+                Console.WriteLine("");
+                Console.WriteLine("******Testing lastest complementation******");
+                Console.WriteLine("");
+               
                 // consola para salario
 
                 Console.WriteLine("*******************");
