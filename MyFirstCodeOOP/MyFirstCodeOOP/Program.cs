@@ -1,7 +1,4 @@
-﻿using MyFirstCodeOOP;
-using System;
-using System.Collections;
-
+﻿using System;
 namespace MyFirstCodeOOP
 {
     internal class Program
@@ -10,31 +7,38 @@ namespace MyFirstCodeOOP
         {
             try
             {
-                Console.WriteLine("OOP CONCEPTS");
-                Console.WriteLine("************");
+             
+                
+                // consola para salario
 
-                Console.WriteLine("Please write you birth day: ");
-                var year = Console.ReadLine();
-                Console.WriteLine("");
-                Console.WriteLine("Please write you birth month: ");
-                var month = Console.ReadLine();
-                Console.WriteLine("");
-                Console.WriteLine("Please write you birth year: ");
-                var day = Console.ReadLine();
-                Console.WriteLine("");
-                Console.WriteLine(new Date(Convert.ToInt32(year), Convert.ToInt32(day), Convert.ToInt32(month)));
-                Console.WriteLine("");
-                Console.WriteLine("*****Testing latest implementation*****");
-                Console.WriteLine("");
+                Console.WriteLine("*******************");
+                Console.WriteLine("* SALARY EMPLOYEE *");
+                Console.WriteLine("*******************");
+
+                Console.WriteLine("Please write You ID: ");
+                int ID = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please write you Name: ");
+                string firstname = Console.ReadLine();
+
+                Console.WriteLine("Please write you last name: ");
+                string lastname = Console.ReadLine();
+
+                Console.WriteLine("Are you active?: ");
+                bool isactive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your salary: ");
+                decimal salary = Convert.ToDecimal(Console.ReadLine());
+
                 Employee salaryEmployee = new SalaryEmployee()
 
                 {
-                    Id = Convert.ToInt32(Console.ReadLine()),
-                    FirstName = Console.ReadLine(),
-                    LastName = Console.ReadLine(),
-                    Birthday = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
-                    HiringDate = new Date(2022,3,4),
-                    IsActive = Convert.ToBoolean(Console.ReadLine()),
+                    Id = ID,
+                    FirstName = firstname,
+                    LastName = lastname,
+                    Birthday = new Date(2003, 05, 30),
+                    HiringDate = new Date(2022, 3, 4),
+                    IsActive = isactive,
                     Salary = Convert.ToDecimal(Console.ReadLine()),
 
 
@@ -42,12 +46,54 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine(salaryEmployee);
 
+                Console.WriteLine("");
+                //Aqui comienza la nueva consola para la comision 
+
+                Console.WriteLine("************************");
+                Console.WriteLine("*  COMISSION EMPLOYEE  *");
+                Console.WriteLine("************************");
+
+                Console.WriteLine("Please write You ID: ");
+                ID = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please write you Name: ");
+                firstname = Console.ReadLine();
+
+                Console.WriteLine("Please write you last name: ");
+                lastname = Console.ReadLine();
+
+                Console.WriteLine("Are you active?: ");
+                isactive = Convert.ToBoolean(Console.ReadLine());
+
+                Console.WriteLine("Enter your Comission percentage: ");
+                float comissionpercentege = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Enter your sales: ");
+                decimal sales = Convert.ToDecimal(Console.ReadLine());
+
+                Employee comissionemployee = new ComissionEmployee()
+                {
+                    Id = ID,
+                    FirstName = firstname,
+                    LastName = lastname,
+                    Birthday = new Date(2003, 05, 30),
+                    HiringDate = new Date(2022, 3, 4),
+                    IsActive = isactive,
+                    ComissionPercentage = comissionpercentege,
+                    Sales = sales,
+                    
+
+                };
+
+                Console.WriteLine(comissionemployee);
+
+
             }
             catch (Exception oli)
             {
                 Console.WriteLine(oli.Message);
             }
-          
+
             Console.WriteLine("");
         }
 

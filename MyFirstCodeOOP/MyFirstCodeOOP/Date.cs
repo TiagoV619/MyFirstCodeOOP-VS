@@ -1,9 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MyFirstCodeOOP
+﻿namespace MyFirstCodeOOP
 {
 
     public class Date
@@ -49,7 +44,7 @@ namespace MyFirstCodeOOP
                 throw new Dayexception("The day is invalid!");
             }
 
-            if (month == 1 || month == 3|| month == 5 || month == 7 || month == 8|| month == 10 || month == 12)
+            if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
             {
                 if (day >= 1 && day <= 31)
                 {
