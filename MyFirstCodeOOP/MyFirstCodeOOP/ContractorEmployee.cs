@@ -16,7 +16,7 @@ namespace MyFirstCodeOOP
         #region Methods
         public override decimal GetValueToPay()
         {
-            return (hours * hourvalue);
+            return ((decimal)hours * hourvalue);
         }
 
         public override string ToString()
